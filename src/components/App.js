@@ -1,10 +1,10 @@
-import CardUser from "./CardUser";
+import CardUser from "./Card/CardUser";
 
 
 function App() {
   return (
     <>
-      <CardUser/>
+      <CardUser />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Verified from '../source/verified.png'
-import Badge from '../source/badge.png'
+import Verified from '../../source/verified.png'
+import Badge from '../../source/badge.png'
 
 export const Container = styled.div`
 display: flex;

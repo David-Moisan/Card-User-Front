@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import userData from '../user.json'
-import Logo from '../source/logoMin.png'
-import Banner from '../source/123test.jpg'
-import Blender from '../source/minBlender.png'
-import Unity from '../source/minUnity.png'
-import Photoshop from '../source/photoshop.png'
+import userData from '../../user.json'
+import Logo from '../../source/logoMin.png'
+import Banner from '../../source/123test.jpg'
+import Blender from '../../source/minBlender.png'
+import Unity from '../../source/minUnity.png'
+import Photoshop from '../../source/photoshop.png'
 import { 
   CardAvatar, 
   CardBadge, 
@@ -22,7 +22,7 @@ import {
   Container, 
   SkillItem, 
   SoftwareItem 
-} from './AppStyled';
+} from './CardStyled';
 
 export default function CardUser() {
     const [data, setData] = useState([])
@@ -47,18 +47,39 @@ export default function CardUser() {
         fetchData()
     }, [])
 
-    const [hisXp, setXp] = useState()
-    const [hisLevel, setLevel] = useState()
-  
-    useEffect(() => {
-        const hisXp = data.map((item) => (item.xp))
-        const xpBar = document.getElementById("xp-bar")
+    if(isLoading) {
+        console.log('Is Loading')
+    }
 
-        
-        for (let i = 0; i < hisXp; i++) {
-        xpBar.style.width = `${i + 1}%`
+    if(error) {
+        alert('An error')
+    }
+
+    /* const [hisLevel, setLevel] = useState()
+
+    
+    useEffect(() => {
+        async function createDynamicXpBar() {
+            
+            const points = data.map((item) => (item.xp))
+            const xpBar = document.getElementById("xp-bar")
+
+            console.log(points);
+
+            for (let i = 0; i < points; i++) {
+                xpBar.style.width = `${i + 1}%`     
+            }
+
+            let level = data.map((item) => (item.level))
+            
+            if (points > 249) {
+                const nextLevel = level[0] = 1
+                console.log(nextLevel);
+                console.log(hisLevel);
+            } 
         }
-    })
+        createDynamicXpBar()
+    }) */
 
   return (
     <Container>
