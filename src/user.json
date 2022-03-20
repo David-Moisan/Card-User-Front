@@ -1,0 +1,25 @@
+[
+    {
+        "username": "Davprocode",
+        "verified": "true",
+        "level": 0,
+        "xp": 20,
+        "skills": [
+            {
+                "first" : "3D Artist",
+                "second" : "Concept Artist",
+                "third" : "3D Modeling",
+                "fourth" : "Illustration",
+                "fifth" : "Environment Design",
+                "sixth" : "Developers"
+            }
+        ],
+        "software": [
+            {
+                "blender": "Blender",
+                "unity": "Unity",
+                "photoshop": "Photoshop"
+            }
+        ]
+    }
+]

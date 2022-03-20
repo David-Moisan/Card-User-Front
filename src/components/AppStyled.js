@@ -126,10 +126,11 @@ export const CardXpLevelBar = styled.div`
 
 export const CardXpBar = styled.div`
 border-radius: 8px;
-width: 106.76px;
+width: 0%;
 height: 3px;
 background-color: #f1f1e4;
 box-shadow: inset 0px 4px 4px rgba(0,0,0,.25);
+transition: width 1s ease-in-out;
 `
 export const CardUserSkills = styled.div`
 margin: 21px 25px 0 25px;
